@@ -16,18 +16,21 @@ header {
     color: #ffffff;
 }
 
-header h1 {
+/* removed header - redundant */
+h1 {
     display: inline-block;
     font-size: 48px;
 }
 
-header h1 .seo {
+/* removed header - redundant */
+.seo {
     color: #d9dcd6;
 }
 
-/* added nav element to all styles for div to account for replacement in HTML */
+/* added nav element to applicable styles for div replacement in HTML */
 
-header nav {
+/* removed header - redundant */
+nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
@@ -35,15 +38,16 @@ header nav {
     font-size: 20px;
 }
 
-/* removed all but ul to prevent redundant code */
-
-ul {
+/* condensded to li only - redundant */
+/* li {
     list-style-type: none;
-}
+} */
 
-header nav ul li {
+/* removed all but li - redundant */
+li {
     display: inline-block;
     margin-left: 25px;
+    list-style-type: none;
 }
 
 a {

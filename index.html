@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- added descriptive title -->
     <title>Horiseon Social Solution Services</title>
+    <!-- devtools identified missing meta tags - used W3 Schools for best practices: https://www.w3schools.com/tags/tag_meta.asp -->
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Web page for Horiseon Social Solutions">
 </head>
 
 <body>
@@ -27,7 +30,8 @@
             </ul>
         </nav>
     </header>
-    <div class="hero"></div>
+    <!-- altered background image div for screen reader compatibility. Referenced MDN: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Img_role -->
+    <div class="hero" role="img" aria-label="Horiseon employees at a conference room table examine paperwork"></div>
     <div class="content">
         <div class="search-engine-optimization">
             <img src="./assets/images/search-engine-optimization.jpg" class="float-left" />
@@ -77,9 +81,8 @@
     <!-- changed div element w/ "footer" class to footer element for semantic compliance -->
     <footer>
         <!-- replaced heart emoji with text for screenreader compatibility
-             (saw option for aria labels but conflicted on img
-             descriptor vs. sentence continuity
-              so just eliminated) -->
+             (found content explaining aria labels but conflicted on img
+             descriptor vs. sentence continuity so just eliminated) -->
         <h2>Made with love by Horiseon</h2>
         <p>
             &copy; 2019 Horiseon Social Solution Services, Inc.
