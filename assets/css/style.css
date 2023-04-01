@@ -91,14 +91,16 @@ section {
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
-}
-
-.benefit-lead {
-    margin-bottom: 32px;
     color: #ffffff;
 }
 
-.benefit-brand {
+/* consolidated with class */
+.asideblock {
+    margin-bottom: 32px;
+    /* color: #ffffff; */
+}
+
+/* .benefit-brand {
     margin-bottom: 32px;
     color: #ffffff;
 }
@@ -106,14 +108,15 @@ section {
 .benefit-cost {
     margin-bottom: 32px;
     color: #ffffff;
-}
+} */
 
-.benefit-lead h3 {
+/* consolidated with class */
+.asideheading {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.benefit-brand h3 {
+/* .benefit-brand h3 {
     margin-bottom: 10px;
     text-align: center;
 }
@@ -121,15 +124,17 @@ section {
 .benefit-cost h3 {
     margin-bottom: 10px;
     text-align: center;
-}
+} */
 
-.benefit-lead img {
+
+/* consolidated with class */
+.asideimage {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.benefit-brand img {
+/* .benefit-brand img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
@@ -139,7 +144,7 @@ section {
     display: block;
     margin: 10px auto;
     max-width: 150px;
-}
+} */
 
 /* condensed individual article stylings into one to eliminate redundancy */
 article {
@@ -197,7 +202,7 @@ article {
     font-size: 36px;
 } */
 
-/* added class to h2 headings for articles and consolidated CSS */
+/* consolidated with class */
 .articleheading {
     margin-bottom: 20px;
     font-size: 36px;
