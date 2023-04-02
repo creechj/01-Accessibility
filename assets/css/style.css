@@ -1,14 +1,16 @@
+/* universal sizing */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/* applies for page under header */
 body {
     background-color: #d9dcd6;
 }
 
-/* changed all "header" class to reference header element for semantic compliance */
+/* sets font and color them for page header */
 header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -16,20 +18,18 @@ header {
     color: #ffffff;
 }
 
-/* removed header - redundant */
-h1 {
+/* sizes and aligns page title in header */
+#sitetitle {
     display: inline-block;
     font-size: 48px;
 }
 
-/* removed header - redundant */
-.seo {
+/* stylizes 'seo' text within Horiseon title */
+#seo {
     color: #d9dcd6;
 }
 
-/* added nav element to applicable styles for div replacement in HTML */
-
-/* removed header - redundant */
+/* positions nav menu in upper right of header; also formats font for menu options */
 nav {
     padding-top: 15px;
     margin-right: 20px;
@@ -38,23 +38,21 @@ nav {
     font-size: 20px;
 }
 
-/* condensded to li only - redundant */
+/* positions menu options inside of nav */
 li {
     display: inline-block;
     margin-left: 25px;
     list-style-type: none;
 }
 
+/* stylizes text in nav menu */
 a {
     color: #ffffff;
     text-decoration: none;
 }
 
-p {
-    font-size: 16px;
-}
-
-.hero {
+/* formats postion and size of large, central page image */
+#mainimage {
     height: 800px;
     width: 100%;
     margin-bottom: 25px;
@@ -63,26 +61,51 @@ p {
     background-position: center;
 }
 
-.float-left {
-    float: left;
-    margin-right: 25px;
-    max-height: 200px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
-    max-height: 200px;
-}
-
-/* replaced class with section element (only use for class - unnecessary) */
-section {
+/* positions and sizes main page content */
+main {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
-.benefits {
+/* sizes, positions, and stylizes sections within main content */
+.maincontentsection {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* positions and sets font size for main content section titles */
+.maincontentheading {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/* next 3 position and size images for each main content section */
+#seoimage {
+    float: left;
+    margin-right: 25px;
+    max-height: 200px;
+}
+
+#socialmediaimage {
+    float: left;
+    margin-right: 25px;
+    max-height: 200px;
+}
+
+#onlinerepimage {
+    float: right;
+    margin-left: 25px;
+    max-height: 200px;
+}
+
+/* sizes, positions, and stylizes aside with benefits content */
+aside {
     margin-right: 20px;
     padding: 20px;
     clear: both;
@@ -94,121 +117,27 @@ section {
     color: #ffffff;
 }
 
-/* consolidated with class */
-.asideblock {
+/* sets position and font size of sections containing benefits content */
+.benefitcontentsection {
     margin-bottom: 32px;
+    font-size: 16px;
     /* color: #ffffff; */
 }
 
-/* .benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-} */
-
-/* consolidated with class */
-.asideheading {
+/* positions titles of benefit content sections */
+.benefitheading {
     margin-bottom: 10px;
     text-align: center;
 }
 
-/* .benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-} */
-
-
-/* consolidated with class */
-.asideimage {
+/* sizes images for benefit content */
+.benefitimage {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-/* .benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-} */
-
-/* condensed individual article stylings into one to eliminate redundancy */
-article {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-/* #online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-#social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-} */
-
-/* consolidated to classes for float-left/right imgs */
-/* #search-engine-optimization img {
-    max-height: 200px;
-}
-
-#online-reputation-management img {
-    max-height: 200px;
-}
-
-#social-media-marketing img {
-    max-height: 200px;
-} */
-
-/* #search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-#online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-#social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-} */
-
-/* consolidated with class */
-.articleheading {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-/* changed footer class to footer element for semantic compliance */
+/* positions and stylizes footer */
 footer {
     padding: 30px;
     clear: both;
@@ -216,6 +145,7 @@ footer {
     text-align: center;
 }
 
-footer h2 {
+/* adjust font size for footer main message */
+#footermessage {
     font-size: 20px;
 }

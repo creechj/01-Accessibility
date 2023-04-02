@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
+<!-- head changes:
+    -made title more descriptive
+    -used devtools accessibility test; identified missing standard metas (size, desc.)
+        (ref to fix: https://www.w3schools.com/tags/tag_meta.asp)
+ -->
+
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- added descriptive title -->
     <title>Horiseon Social Solution Services</title>
-    <!-- devtools identified missing meta tags - used W3 Schools for best practices: https://www.w3schools.com/tags/tag_meta.asp -->
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Web page for Horiseon Social Solutions">
 </head>
 
 <body>
-    <!-- changed div w/ "header" class to header element for semantic compliance -->
+    
+    <!-- header changes:
+        -changed div to header element with nav for menu
+        -set id for site title to distinguish for future updates
+    -->
     <header>
-        <h1>Hori<span class="seo">seo</span>n</h1>
-        <!-- changed div for menu to nav element for semantic compliance -->
+        <h1 id="sitetitle">Hori<span id="seo">seo</span>n</h1>
         <nav>
             <ul>
                 <li>
@@ -30,66 +37,81 @@
             </ul>
         </nav>
     </header>
-    <!-- altered background image div for screen reader compatibility. Referenced MDN: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Img_role -->
-    <div class="hero" role="img" aria-label="Horiseon employees at a conference room table examine paperwork"></div>
-    <!-- adjusted content for semantic compliance - changed main content to section and benefits content to aside.
-        Changed internal div elements to articles. Referenced: https://www.c-sharpcorner.com/UploadFile/b5be7f/working-with-semantic-elements-in-html5-with-layout-examples/ -->
-    <!-- removed class - only used for 1 styling - unnecessary -->
-    <section>
-        <!-- replaced div classes with id elements [only] to eliminate redundancy. Added classes to h2 headings for CSS application -->
-        <article id="search-engine-optimization">
-            <img src="./assets/images/search-engine-optimization.jpg" class="float-left" alt="Search Engine Optimization infographic displayed on notebook surrounded by miscelaneous office supplies"/>
-            <h2 class="articleheading">Search Engine Optimization</h2>
+    
+    <!-- figure changes: 
+        -changed primary background image to figure element; added aria-label description
+        (ref to fix: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Img_role)
+    -->
+    <figure id="mainimage" role="img" aria-label="Horiseon employees at a conference room table examine paperwork"></figure>
+    
+    <!-- main changes:
+        -changed primary content container to main w/ section elements;
+        -adjusted all id's and classes for semantics (fixed broken nav link for SEO content)
+    -->
+    <main class="maincontent">
+        <section id="search-engine-optimization" class="maincontentsection">
+            <img src="./assets/images/search-engine-optimization.jpg" id="seoimage" alt="Search Engine Optimization infographic displayed on notebook surrounded by miscelaneous office supplies"/>
+            <h2 class="maincontentheading">Search Engine Optimization</h2>
             <p>
                 The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business.
             </p>
-        </article>
-        <article id="online-reputation-management">
-            <img src="./assets/images/online-reputation-management.jpg" class="float-right" alt="User with phone in left hand operates laptop displaying 'Reputation' with colorful charts"/>
-            <h2 class="articleheading">Online Reputation Management</h2>
+        </section>>
+        <section id="online-reputation-management" class="maincontentsection">
+            <img src="./assets/images/online-reputation-management.jpg" id="onlinerepimage" alt="User with phone in left hand operates laptop displaying 'Reputation' with colorful charts"/>
+            <h2 class="maincontentheading">Online Reputation Management</h2>
             <p>
                 The web is full of opinions, and some of these can be negative. Social media allows anyone with an internet connection to say whatever they want about your business. Online Reputation Management gives you the control over what potential customers see when they search for your business.
             </p>
-        </article>
-        <article id="social-media-marketing">
-            <img src="./assets/images/social-media-marketing.jpg" class="float-left" alt="Several employees work at large table covered in scattered generic social media icons"/>
-            <h2 class="articleheading">Social Media Marketing</h2>
+        </section>
+        <section id="social-media-marketing" class="maincontentsection">
+            <img src="./assets/images/social-media-marketing.jpg" id="socialmediaimage" alt="Several employees work at large table covered in scattered generic social media icons"/>
+            <h2 class="maincontentheading">Social Media Marketing</h2>
             <p>
                 Social media continues to have a sizable influence on buying habits. Social media marketing helps you determine which platforms are suited to your brand, using analytics to find the right markets and increase your lead generation.
             </p>
-        </article>
-    </section>
+        </section>
+    </main>
+
+    <!-- aside changes:
+        -changed benefit content to aside container w/ section elements
+        -adjusted classes for semantics
+        -added alt text to images for screen reader compatibility
+     -->
     <aside class="benefits">
-        <div class="asideblock">
-            <h3 class="asideheading">Lead Generation</h3>
-            <img class="asideimage"  src="./assets/images/lead-generation.png" alt="Outline image of half cog funneling into a dollar sign"/>
+        <section class="benefitcontentsection">
+            <h3 class="benefitheading">Lead Generation</h3>
+            <img class="benefitimage"  src="./assets/images/lead-generation.png" alt="Outline image of half cog funneling into a dollar sign"/>
             <p>
                 Inbound strategies for lead generation require less work for your business, bringing customers directly to your website.
             </p>
-        </div>
-        <div class="asideblock">
-            <h3 class="asideheading">Brand Awareness</h3>
-            <img class="asideimage" src="./assets/images/brand-awareness.png" alt="Outline image of emitting lightbulb in place of head on tie-wearing shoulder silouette"/>
+        </section>
+        <section class="benefitcontentsection">
+            <h3 class="benefitheading">Brand Awareness</h3>
+            <img class="benefitimage" src="./assets/images/brand-awareness.png" alt="Outline image of emitting lightbulb in place of head on tie-wearing shoulder silouette"/>
             <p>
                 Users find your business through paid and organic searches, increasing the search ranking and visibility for your business.
             </p>
-        </div>
-        <div class="asideblock">
-            <h3 class="asideheading">Cost Management</h3>
-            <img class="asideimage" src="./assets/images/cost-management.png" alt="Outline of cog overlayed with overlapping, generic coins"/>
+        </section>
+        <section class="benefitcontentsection">
+            <h3 class="benefitheading">Cost Management</h3>
+            <img class="benefitimage" src="./assets/images/cost-management.png" alt="Outline of cog overlayed with overlapping, generic coins"/>
             <p>
                 As the search ranking for your business increases, your advertising costs decrease, and you no longer need to advertise your page.
             </p>
-        </div>
+        </section>
     </aside>
-    <!-- changed div element w/ "footer" class to footer element for semantic compliance -->
-    <footer>
-            <!-- replaced heart emoji with text for screenreader compatibility
-             (found content explaining aria labels but conflicted on img
-             descriptor vs. sentence continuity so just eliminated) -->
 
-        <h2>Made with love by Horiseon</h2>
-        <p>
+
+    <!-- footer changes:
+        -changed to footer element
+        -replaced heart emoji in h2 with text for screenreader compatibility
+            *note: found method of wrapping emoji in span and applying aria-label;
+            could not decide between image desc. and sentence continuity so removed (best practice)
+        -gave h2 message and copyright paragraph id for style application and future modular updates
+    -->
+    <footer>
+        <h2 id="footermessage">Made with love by Horiseon</h2>
+        <p id="copyrightmessage">
             &copy; 2019 Horiseon Social Solution Services, Inc.
         </p>
     </footer>
